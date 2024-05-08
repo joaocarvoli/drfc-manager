@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import TypedDict
 from enum import Enum
 
 
