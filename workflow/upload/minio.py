@@ -2,12 +2,13 @@ import os
 import io
 
 from minio.error import MinioException
-from orjson import dumps
+from orjson import dumps, OPT_INDENT_2
 from minio import Minio
 from dotenv import load_dotenv
 
 from workflow.upload.exceptions.file_upload_exception import FileUploadException
 from workflow.upload.types.hyperparameters import HyperParameters
+from workflow.upload.types.model_metadata import ModelMetadata
 
 load_dotenv()
 
@@ -34,7 +35,7 @@ class MinioMiddleware:
         """
         
         try:
-            hyperparameters_serialized = dumps(hyperparameters)
+            hyperparameters_serialized = dumps(hyperparameters, option=OPT_INDENT_2)
             object_size = len(hyperparameters_serialized)
             object_name = 'hyperparameters.json'
             
@@ -48,12 +49,39 @@ class MinioMiddleware:
             
             return True if result else False
         except MinioException:
-            raise FileUploadException(message='Error uploading hyperparameters file to S3 bucket')
+            raise FileUploadException(message=f'Error uploading {object_name} file to S3 bucket')
         except Exception as e:
             raise FileUploadException(original_exception=e)
 
     def upload_reward_function(self):
         pass
 
-    def upload_metadata(self):
-        pass
+    def upload_metadata(self, model_metadata: ModelMetadata):
+        """
+        Uploads metadata to an S3 bucket.
+
+        Args:
+            model_metadata (Model Metadata): The metadata to upload.
+
+        Returns:
+            bool: True if the upload was successful, False otherwise.
+        """
+        
+        try:
+            model_metadata_serialized = dumps(model_metadata, option=OPT_INDENT_2)
+            object_size = len(model_metadata_serialized)
+            object_name = 'model_metadata.json'
+            
+            result = self.client.put_object(
+                self.bucket_name,
+                f'{self.custom_files_folder}/{object_name}',
+                io.BytesIO(model_metadata_serialized),
+                length=object_size,
+                content_type="application/json"
+            )
+            
+            return True if result else False
+        except MinioException:
+            raise FileUploadException(message=f'Error uploading {object_name}  file to S3 bucket')
+        except Exception as e:
+            raise FileUploadException(original_exception=e)
