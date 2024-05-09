@@ -1,6 +1,7 @@
 import os
 import io
 
+from io import BytesIO
 from minio.error import MinioException
 from orjson import dumps, OPT_INDENT_2
 from minio import Minio
@@ -21,6 +22,7 @@ class MinioMiddleware:
         endpoint = os.getenv('MINIO_SERVER_URL')
         self.bucket_name = os.getenv('BUCKET_NAME')
         self.custom_files_folder = os.getenv('CUSTOM_FILES_FOLDER_PATH')
+        self.reward_function_path = os.getenv('REWARD_FUNCTION_PATH')
         self.client = Minio(endpoint, access_key, secret_key, secure=False)
 
     def upload_hyperparameters(self, hyperparameters: HyperParameters):
@@ -54,7 +56,29 @@ class MinioMiddleware:
             raise FileUploadException(original_exception=e)
 
     def upload_reward_function(self):
-        pass
+        try:
+            current_dir = os.getcwd()
+            file_path = os.path.join(os.path.dirname(current_dir), self.reward_function_path)
+            
+            with open(file_path, "rb") as fh:
+                buf = BytesIO(fh.read())
+            
+            buffer_size = buf.getbuffer().nbytes
+            object_name = 'reward_function.py'
+
+            result = self.client.put_object(
+                self.bucket_name,
+                f'{self.custom_files_folder}/{object_name}',
+                buf,
+                length=buffer_size,
+                content_type="text/plain"
+            )
+            
+            return True if result else False
+        except MinioException:
+            raise FileUploadException(message=f'Error uploading {object_name}  file to S3 bucket')
+        except Exception as e:
+            raise FileUploadException(original_exception=e)
 
     def upload_metadata(self, model_metadata: ModelMetadata):
         """

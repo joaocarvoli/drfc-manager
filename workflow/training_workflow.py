@@ -14,3 +14,7 @@ print(upload_hyper_res)
 upload_metadata_res = minio.upload_metadata(model_metadata=model_metadata)
 
 print(upload_metadata_res)
+
+upload_reward = minio.upload_reward_function()
+print(upload_reward)
+
