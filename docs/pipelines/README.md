@@ -9,4 +9,5 @@ and not.
 
 Each pipeline will have a specific design flow that you can find on its `.md` file and you can see below:
 - [Start Training Pipeline](./start_training.md)
+- [Stop Training Pipeline](./stop_training.md)
 
