@@ -7,9 +7,9 @@ from orjson import dumps, OPT_INDENT_2
 from minio import Minio
 from dotenv import load_dotenv
 
-from workflow.upload.exceptions.file_upload_exception import FileUploadException
-from workflow.upload.types.hyperparameters import HyperParameters
-from workflow.upload.types.model_metadata import ModelMetadata
+from pipelines.types.hyperparameters import HyperParameters
+from pipelines.types.model_metadata import ModelMetadata
+from pipelines.upload.exceptions.file_upload_exception import FileUploadException
 
 load_dotenv()
 
