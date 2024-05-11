@@ -1,7 +1,6 @@
+from pipelines.types.hyperparameters import HyperParameters
+from pipelines.types.model_metadata import ModelMetadata
 from upload.minio import MinioMiddleware
-from upload.types.hyperparameters import HyperParameters
-from workflow.upload.types.model_metadata import ModelMetadata
-from orjson import dumps
 
 minio = MinioMiddleware()
 
