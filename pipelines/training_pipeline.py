@@ -11,7 +11,7 @@ from pipelines.types_built.hyperparameters import HyperParameters
 from pipelines.types_built.model_metadata import ModelMetadata
 from dotenv import load_dotenv
 
-from pipelines.utils.minio.minio import MinioMiddleware
+from pipelines.utils.minio.server import MinioMiddleware
 
 load_dotenv()
 
@@ -21,14 +21,8 @@ minio = MinioMiddleware()
 hyperparameters = HyperParameters()
 model_metadata = ModelMetadata()
 
-
 sagemaker_tag = os.getenv('SAGEMAKER_IMAGE_REPOTAG')
 robomaker_tag = os.getenv('ROBOMAKER_IMAGE_REPOTAG')
-images_tag = []
-if sagemaker_tag is not None:
-    images_tag.append(sagemaker_tag)
-if robomaker_tag is not None:
-    images_tag.append(robomaker_tag)
 
 
 # upload_hyper_res = minio.upload_hyperparameters(hyperparameters=hyperparameters)
@@ -45,7 +39,7 @@ def train_pipeline(hyperparameters: HyperParameters, model_metadata: ModelMetada
     training_start_pipeline = (
         create_sagemaker_temp_files >>
         check_if_metadata_is_available >>
-        images_tags_has_some_running_container(docker_client, images_tag) >>
+        images_tags_has_some_running_container(docker_client, [sagemaker_tag, robomaker_tag]) >>
         forward_condition
         .Then(echo("The training is running, please stop the train before starting a new one."))
         .Else(
