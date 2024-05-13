@@ -125,7 +125,7 @@ if config['MULTI_CONFIG'] == "True" and num_workers > 1:
             s3_yaml_name_list = s3_yaml_name.split('.')
             s3_yaml_name_temp = s3_yaml_name_list[0] + "_%d.yaml" % i
 
-            #upload additional training params files
+            #minio additional training params files
             yaml_key = os.path.normpath(os.path.join(s3_prefix, s3_yaml_name_temp))
             s3_client.upload_file(Bucket=s3_bucket, Key=yaml_key, Filename=local_yaml_path)            
 
@@ -208,7 +208,7 @@ if config['MULTI_CONFIG'] == "True" and num_workers > 1:
             s3_yaml_name_list = s3_yaml_name.split('.')
             s3_yaml_name_temp = s3_yaml_name_list[0] + "_%d.yaml" % i
 
-            #upload additional training params files
+            #minio additional training params files
             yaml_key = os.path.normpath(os.path.join(s3_prefix, s3_yaml_name_temp))
             local_yaml_path = os.path.abspath(os.path.join(os.environ.get('DR_DIR'),'tmp', 'training-params-' + train_time + '-' + str(i) + '.yaml'))
             with open(local_yaml_path, 'w') as yaml_file:
