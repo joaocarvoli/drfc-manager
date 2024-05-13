@@ -1,10 +1,13 @@
-from gloe import transformer
+from gloe import transformer, partial_transformer, condition
 from pipelines.helpers.files_manager import create_folder, delete_files_on_folder
 from pipelines.transformers.exceptions.base import BaseExceptionTransformers
 
+sagemaker_temp_dir = '/tmp/sagemaker'
+work_directory = '/tmp/teste'
+
 
 @transformer
-def create_sagemaker_temp_files(sagemaker_temp_dir: str):
+def create_sagemaker_temp_files(_) -> None:
     try:
         create_folder(sagemaker_temp_dir, 0o770)
     except PermissionError as e:
@@ -14,7 +17,7 @@ def create_sagemaker_temp_files(sagemaker_temp_dir: str):
 
 
 @transformer
-def check_if_metadata_is_available(work_directory: str):
+def check_if_metadata_is_available(_) -> None:
     try:
         create_folder(work_directory)
         delete_files_on_folder(work_directory)
