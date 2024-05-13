@@ -1,5 +1,4 @@
 docker==7.0.0
-python-dotenv==1.0.1
 orjson==3.10.3
 minio==7.2.7
 paramiko==3.4.0
