@@ -7,9 +7,9 @@ from orjson import dumps, OPT_INDENT_2
 from minio import Minio
 from dotenv import load_dotenv
 
-from pipelines.types.hyperparameters import HyperParameters
-from pipelines.types.model_metadata import ModelMetadata
-from pipelines.upload.exceptions.file_upload_exception import FileUploadException
+from pipelines.types_built.hyperparameters import HyperParameters
+from pipelines.types_built.model_metadata import ModelMetadata
+from pipelines.utils.minio.exceptions.file_upload_exception import FileUploadException
 
 load_dotenv()
 
@@ -30,10 +30,10 @@ class MinioMiddleware:
         Uploads hyperparameters to an S3 bucket.
 
         Args:
-            hyperparameters (HyperParameters): The hyperparameters to upload.
+            hyperparameters (HyperParameters): The hyperparameters to minio.
 
         Returns:
-            bool: True if the upload was successful, False otherwise.
+            bool: True if the minio was successful, False otherwise.
         """
         
         try:
@@ -85,10 +85,10 @@ class MinioMiddleware:
         Uploads metadata to an S3 bucket.
 
         Args:
-            model_metadata (Model Metadata): The metadata to upload.
+            model_metadata (Model Metadata): The metadata to minio.
 
         Returns:
-            bool: True if the upload was successful, False otherwise.
+            bool: True if the minio was successful, False otherwise.
         """
         
         try:
