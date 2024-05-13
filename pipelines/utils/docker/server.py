@@ -1,8 +1,6 @@
 import os
-from dotenv import load_dotenv
 from docker import APIClient
 
-load_dotenv()
 
 local_docker_daemon = os.getenv('LOCAL_SERVER_DOCKER_DAEMON')
 remote_docker_daemon = os.getenv("REMOTE_SERVER_DOCKER_DAEMON")

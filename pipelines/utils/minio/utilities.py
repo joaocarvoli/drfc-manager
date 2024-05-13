@@ -8,9 +8,6 @@ from orjson import dumps, OPT_INDENT_2
 
 from pipelines.types_built.model_metadata import ModelMetadata
 from pipelines.utils.minio.exceptions.file_upload_exception import FileUploadException
-from dotenv import load_dotenv
-
-load_dotenv()
 
 _bucket_name = os.getenv('BUCKET_NAME')
 _custom_files_folder = os.getenv('CUSTOM_FILES_FOLDER_PATH')
@@ -53,22 +50,17 @@ def upload_hyperparameters(
 
 
 def upload_reward_function(
-    minio_client: MinioClient
+    minio_client: MinioClient,
+    reward_function_buffer: io.BytesIO
 ):
     try:
-        current_dir = os.getcwd()
-        file_path = os.path.join(os.path.dirname(current_dir), _reward_function_path)
-        
-        with open(file_path, "rb") as fh:
-            buf = io.BytesIO(fh.read())
-        
-        buffer_size = buf.getbuffer().nbytes
+        buffer_size = reward_function_buffer.getbuffer().nbytes
         object_name = 'reward_function.py'
         
         result = minio_client.put_object(
             _bucket_name,
             f'{_custom_files_folder}/{object_name}',
-            buf,
+            reward_function_buffer,
             length=buffer_size,
             content_type="text/plain"
         )

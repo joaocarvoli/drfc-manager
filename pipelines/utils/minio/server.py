@@ -1,16 +1,14 @@
 import os
 
 from minio import Minio as MinioClient
-from dotenv import load_dotenv
 
-load_dotenv()
 
 access_key = os.getenv('ACCESS_KEY')
 secret_key = os.getenv('SECRET_KEY')
 endpoint = os.getenv('MINIO_SERVER_URL')
 
 
-class MinioMiddleware:
+class MinioClientServer:
     _instance = None
     
     def __init__(self):
