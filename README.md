@@ -1,6 +1,6 @@
 # Notebook DRfC Manager
 
-This solution aims to simplify the model training workflow performed by the DRfC (DeepRacer for Cloud) and empower this process allowing the racer to manage it through a Jupyter Notebook (python environment) allowing the racer to use the advantages of the Machine Learning algorithms.
+This solution aims to simplify the model training workflow performed by the DRfC (DeepRacer for Cloud) and empower this process allowing the racer to manage it through a Jupyter Notebook (python environment) allowing the racer to use the advantages of the Machine Learning algorithms. 🏎️ 🤖
 
 Currently, the process is very manual and sensitive to user failures and this solution uses Python structures and libraries to ensure the correctness of each required data to perform model training tasks in a better way.
 
@@ -16,6 +16,11 @@ Currently, the process is very manual and sensitive to user failures and this so
 3. Set the right values on `.env` file
 
 Go and start to use it! :rocket:
+
+## How to use it?
+
+Check this out [Notebooks folder](./notebooks)! 📓
+
 
 ## Contributing
 
