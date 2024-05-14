@@ -9,14 +9,6 @@ Currently, the process is very manual and sensitive to user failures and this so
 
 ![](./docs/architecture_diagram.png)
 
-## Requirements
-
-1. DRfC installed on your machine (currently this solution doesn't include this step)
-2. Install the `requirements.txt`
-3. Set the right values on `.env` file
-
-Go and start to use it! :rocket:
-
 ## How to use it?
 
 Check this out [Notebooks folder](./notebooks)! 📓
