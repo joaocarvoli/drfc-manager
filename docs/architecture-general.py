@@ -11,7 +11,7 @@ graph_attr = {
     "bgcolor": "transparent"
 }
 
-with Diagram("Architecture Diagram", outformat="svg", graph_attr=graph_attr):
+with Diagram("Architecture Diagram", outformat="pdf", graph_attr=graph_attr):
     user = User()
     with Cluster("On Premise Server"):
         with Cluster("Jupyter Environment"):
