@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="feat: Adding initial version of the training notebooks and its requirements" />
+    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="feat: Adding initial version of the training notebooks and its requirements">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/transformers/general.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -25,6 +29,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/typeshed/stdlib/subprocess.pyi" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/miniconda3/envs/ml/lib/python3.10/subprocess.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,19 +54,20 @@
     "Python.docker.executor": "Run",
     "Python.docker_asd.executor": "Run",
     "Python.docker_server.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.training.executor": "Run",
     "Python.training_pipeline.executor": "Run",
     "Python.training_workflow.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/Users/joaocarvoli/Desktop/desktop/uni/notebook-training-drfc/notebooks",
+    "last_opened_file_path": "/Users/joaocarvoli/Desktop/desktop/uni/notebook-training-drfc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
+    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,12 +79,14 @@
       <recent name="$PROJECT_DIR$/docs/pipelines" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pipelines/utils/commands/docker_compose" />
+      <recent name="$PROJECT_DIR$/pipelines/utils/commands/docker_compose/up" />
       <recent name="$PROJECT_DIR$/pipelines/utils" />
       <recent name="$PROJECT_DIR$/pipelines/utils/docker" />
       <recent name="$PROJECT_DIR$/workflow" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.docker_server">
+  <component name="RunManager" selected="Python.main">
     <configuration name="docker_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="notebook-training-drfc" />
       <option name="ENV_FILES" value="" />
@@ -91,6 +102,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/workflow/training/docker_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="notebook-training-drfc" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pipelines" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pipelines/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.training_pipeline" />
         <item itemvalue="Python.training" />
         <item itemvalue="Python.docker_server" />
@@ -204,6 +239,9 @@
       <workItem from="1715615500952" duration="12183000" />
       <workItem from="1715692120182" duration="3905000" />
       <workItem from="1715696232538" duration="319000" />
+      <workItem from="1715696577167" duration="752000" />
+      <workItem from="1715717972775" duration="8688000" />
+      <workItem from="1715731484901" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Initial docs">
       <option name="closed" value="true" />
@@ -435,6 +473,7 @@
     <SUITE FILE_PATH="coverage/notebook_training_drfc$architecture_general.coverage" NAME="architecture-general Coverage Results" MODIFIED="1715694857492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$training.coverage" NAME="training Coverage Results" MODIFIED="1715551619111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines/transformers" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$docker.coverage" NAME="docker_server Coverage Results" MODIFIED="1715376162269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workflow/training" />
+    <SUITE FILE_PATH="coverage/notebook_training_drfc$main.coverage" NAME="main Coverage Results" MODIFIED="1715730400794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$training_workflow.coverage" NAME="training_workflow Coverage Results" MODIFIED="1715219021403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workflow" />
   </component>
 </project>
