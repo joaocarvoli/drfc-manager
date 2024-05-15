@@ -3,9 +3,13 @@ from typing import List
 from docker import APIClient as DockerClient
 from gloe import partial_transformer, condition
 
+from pipelines.types_built.docker import DockerImages
+from pipelines.utils.commands.docker_compose import DockerComposeCommands
 from pipelines.utils.docker.utilities import check_if_image_has_container_running
 
 ImageTag = str
+
+docker_compose = DockerComposeCommands()
 
 
 @partial_transformer
@@ -34,3 +38,8 @@ def echo(_, message: str):
 @condition
 def forward_condition(_condition: bool):
     return _condition
+
+
+@partial_transformer
+def up_composes(_, files_path: List[DockerImages]):
+    docker_compose.up(files_path)
