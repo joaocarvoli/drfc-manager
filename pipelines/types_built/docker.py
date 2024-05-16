@@ -6,4 +6,4 @@ from dataclasses import dataclass
 class DockerImages(str, Enum):
     training = 'training'
     endpoint = 'endpoint'
-    compose_keys = 'compose-keys'
+    keys = 'keys'

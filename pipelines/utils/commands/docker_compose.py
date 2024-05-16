@@ -38,7 +38,7 @@ class DockerComposeCommands:
             
             result = run(command, capture_output=True)
             if result.returncode != 0:
-                raise Exception(result)
+                raise Exception(result.stderr)
         except Exception as e:
             raise e
     
@@ -55,7 +55,7 @@ class DockerComposeCommands:
             
             result = run(command, capture_output=True)
             if result.returncode != 0:
-                raise Exception(result)
+                raise Exception(result.stderr)
         except Exception as e:
             raise e
 

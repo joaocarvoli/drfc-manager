@@ -8,13 +8,17 @@ from pipelines.helpers.files_manager import create_folder, delete_files_on_folde
 from pipelines.transformers.exceptions.base import BaseExceptionTransformers
 from pipelines.types_built.hyperparameters import HyperParameters
 from pipelines.types_built.model_metadata import ModelMetadata
+from pipelines.utils.commands.docker_compose import DockerComposeCommands
 from pipelines.utils.minio.utilities import upload_hyperparameters as _upload_hyperparameters
 from pipelines.utils.minio.utilities import upload_reward_function as _upload_reward_function
 from pipelines.utils.minio.utilities import upload_metadata as _upload_metadata
+from pipelines.types_built.docker import DockerImages
 
 
 sagemaker_temp_dir = '/tmp/sagemaker'
 work_directory = '/tmp/teste'
+
+docker_compose = DockerComposeCommands()
 
 
 @transformer
@@ -66,4 +70,21 @@ def upload_reward_function(_, minio_client: MinioClient, reward_function_buffer:
         raise BaseExceptionTransformers(exception=e)
     except Exception as e:
         raise BaseExceptionTransformers("It was not possible to upload the reward function", e)
+    
 
+@transformer
+def start_training(_):
+    try:
+        images_to_start_training = [DockerImages.training, DockerImages.keys, DockerImages.endpoint]
+        docker_compose.up(images_to_start_training)
+    except Exception as e:
+        raise BaseExceptionTransformers("It was not possible to start the training", e)
+
+
+@transformer
+def stop_training(_):
+    try:
+        images_to_stop_training = [DockerImages.training, DockerImages.keys, DockerImages.endpoint]
+        docker_compose.down(images_to_stop_training)
+    except Exception as e:
+        raise BaseExceptionTransformers("It was not possible to stop the training", e)
