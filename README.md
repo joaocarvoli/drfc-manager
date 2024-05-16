@@ -1,24 +1,14 @@
-# Notebook DRfC Manager
+## Lib `drfc_manager`
 
-This solution aims to simplify the model training workflow performed by the DRfC (DeepRacer for Cloud) and empower this process allowing the racer to manage it through a Jupyter Notebook (python environment) allowing the racer to use the advantages of the Machine Learning algorithms. 🏎️ 🤖
+This lib is being developed directly using the same ideas and implementation of 
+the repo https://github.com/aws-deepracer-community/deepracer-for-cloud according to its description is:
+> "A quick and easy way to get up and running with a DeepRacer training environment using a cloud
+> virtual machine or a local computer" 
+> DRfC
 
-Currently, the process is very manual and sensitive to user failures and this solution uses Python structures and libraries to ensure the correctness of each required data to perform model training tasks in a better way.
+The main purpose of this lib is to provide an easy way to manage your workflow inside the DRfC bringing 
+the power of managing it inside a Jupyter Notebook to **optimize the training of your Reinforcement Learning Model** 
+using pipelines to control these workflows.
 
-
-## General Diagram
-
-![](./docs/architecture_diagram.png)
-
-## How to use it?
-
-Check this out [Notebooks folder](./notebooks)! 📓
-
-
-## Contributing
-
-As you see, the solution is open source to help the bigger amount of racers and find others that also want to help to provide better functionalities. :handshake:
-
-### How to contribute?
-
-Follow this nice tutorial [getting_started_open_source from @gabrieldemarmiesse
-](https://github.com/gabrieldemarmiesse/getting_started_open_source)!
+Using this lib you will also use Machine Learning algorithms to enhance your training results due to being inside a 
+environment controlled by Jupyter (Python).
