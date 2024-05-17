@@ -4,40 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="chore: gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/notebook-training-drfc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/notebook-training-drfc.iml" afterDir="false" />
+    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="chore: .idea and vscode configs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/PythonImportHelper-v2-Completion.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/helpers/files_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/files_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/helpers/training_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/training_params.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/training_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/training_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/exceptions/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/exceptions/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/exceptions/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/general.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/types_built/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/types_built/docker.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/docker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/types_built/hyperparameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/hyperparameters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/types_built/model_metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/model_metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/commands/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/commands/docker_compose.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/commands/docker_compose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/exceptions/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/exceptions/file_upload_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/exceptions/file_upload_exception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/helpers/training_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/training_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/training_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/training_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/transformers/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/general.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/transformers/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/types_built/model_metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/model_metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drfc_manager/utils/minio/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +65,7 @@
     "Python.training_workflow.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.build lib.executor": "Run",
     "Shell Script.jupyter notebook.executor": "Run",
     "git-widget-placeholder": "dev",
     "last_opened_file_path": "/Users/joaocarvoli/Desktop/desktop/uni/notebook-training-drfc",
@@ -117,7 +93,7 @@
       <recent name="$PROJECT_DIR$/workflow" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Shell Script.build lib">
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
@@ -236,8 +212,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="jupyter notebook" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="jupyter notebook" />
+    <configuration name="build lib" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="poetry build" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -258,7 +234,7 @@
       <item itemvalue="Python.training" />
       <item itemvalue="Python.training_pipeline" />
       <item itemvalue="Python.training_workflow" />
-      <item itemvalue="Shell Script.jupyter notebook" />
+      <item itemvalue="Shell Script.build lib" />
     </list>
     <recent_temporary>
       <list>
@@ -519,16 +495,37 @@
       <option name="project" value="LOCAL" />
       <updated>1715738894699</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="chore: removing old requirements.txt and starting to use poetry dependencies manager">
+      <option name="closed" value="true" />
+      <created>1715979566068</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1715979566068</updated>
+    </task>
+    <task id="LOCAL-00029" summary="chore: envs example">
+      <option name="closed" value="true" />
+      <created>1715979583812</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1715979583812</updated>
+    </task>
+    <task id="LOCAL-00030" summary="chore: .idea and vscode configs">
+      <option name="closed" value="true" />
+      <created>1715979602719</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1715979602719</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refact: changing modules location to utils" />
-    <MESSAGE value="feat: starting to create docker utils methods" />
-    <MESSAGE value="feat: generic transformer exception model" />
     <MESSAGE value="feat: prepare config script from DRfC repo" />
     <MESSAGE value="feat: adding exceptions handling" />
     <MESSAGE value="feat: init" />
@@ -551,7 +548,10 @@
     <MESSAGE value="feat: Starting to use docker compose commands through python subprocess" />
     <MESSAGE value="chore: .idea and vscode project files" />
     <MESSAGE value="chore: gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: gitignore" />
+    <MESSAGE value="chore: removing old requirements.txt and starting to use poetry dependencies manager" />
+    <MESSAGE value="chore: envs example" />
+    <MESSAGE value="chore: .idea and vscode configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: .idea and vscode configs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
