@@ -3,9 +3,14 @@ from typing import List
 from docker import APIClient as DockerClient
 from gloe import partial_transformer, condition
 
+from pipelines.transformers.exceptions.base import BaseExceptionTransformers
 from pipelines.types_built.docker import DockerImages
 from pipelines.utils.commands.docker_compose import DockerComposeCommands
 from pipelines.utils.docker.utilities import check_if_image_has_container_running
+from pipelines.utils.minio.utilities import check_if_object_exists as _check_if_object_exists
+
+from minio import Minio as MinioClient
+from minio.error import MinioException
 
 ImageTag = str
 
@@ -38,6 +43,16 @@ def echo(_, message: str):
 @condition
 def forward_condition(_condition: bool):
     return _condition
+
+@partial_transformer
+def check_if_model_exists(_, minio_client: MinioClient, model_name: str):
+    try:
+        file_to_check = '/reward_function.py'
+        return _check_if_object_exists(minio_client, model_name + file_to_check)
+    except MinioException as e:
+        raise BaseExceptionTransformers(exception=e)
+    except Exception as e:
+        raise BaseExceptionTransformers("It was not possible to check if the model exists", e)
 
 
 @partial_transformer

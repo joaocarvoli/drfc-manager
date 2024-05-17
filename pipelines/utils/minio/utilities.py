@@ -119,3 +119,10 @@ def upload_local_data(minio_client: MinioClient, local_data_path: str, object_na
         raise FileUploadException(message=f'Error uploading {object_name}  file to S3 bucket')
     except Exception as e:
         raise FileUploadException(original_exception=e)
+    
+def check_if_object_exists(minio_client: MinioClient, object_name: str):
+    try:
+        minio_client.stat_object(_bucket_name, object_name)
+        return True
+    except MinioException as e:
+        return False
