@@ -75,9 +75,9 @@ def upload_reward_function(_, minio_client: MinioClient, reward_function_buffer:
     
 
 @partial_transformer
-def upload_training_params_file(_, minio_client: MinioClient):
+def upload_training_params_file(_, minio_client: MinioClient, model_name: str):
     try:
-        yaml_key, local_yaml_path = writing_on_temp_training_yml()
+        yaml_key, local_yaml_path = writing_on_temp_training_yml(model_name)
         _upload_local_data(minio_client, local_yaml_path, yaml_key)
     except MinioException as e:
         raise BaseExceptionTransformers(exception=e)
