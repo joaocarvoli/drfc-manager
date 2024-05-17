@@ -3,11 +3,11 @@ from typing import List
 from docker import APIClient as DockerClient
 from gloe import partial_transformer, condition
 
-from pipelines.transformers.exceptions.base import BaseExceptionTransformers
-from pipelines.types_built.docker import DockerImages
-from pipelines.utils.commands.docker_compose import DockerComposeCommands
-from pipelines.utils.docker.utilities import check_if_image_has_container_running
-from pipelines.utils.minio.utilities import check_if_object_exists as _check_if_object_exists
+from drfc_manager.transformers.exceptions.base import BaseExceptionTransformers
+from drfc_manager.types_built.docker import DockerImages
+from drfc_manager.utils.commands.docker_compose import DockerComposeCommands
+from drfc_manager.utils.docker.utilities import check_if_image_has_container_running
+from drfc_manager.utils.minio.utilities import check_if_object_exists as _check_if_object_exists
 
 from minio import Minio as MinioClient
 from minio.error import MinioException

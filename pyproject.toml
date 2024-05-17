@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "drfc-manager"
+version = "0.0.1"
+description = ""
+authors = ["João Victor Carvalho <joaocarvoli@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+docker = "7.0.0"
+orjson = "3.10.3"
+minio = "7.2.7"
+paramiko = "3.4.0"
+pyyaml = "6.0.1"
+gloe = "0.5.9"
+
+
+[tool.poetry.plugins.dotenv]
+ignore = "false"
+location = ".env"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

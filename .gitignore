@@ -169,4 +169,7 @@ cython_debug/
 /pipelines_drfc.egg-info
 
 # Test files
-./pipelines/main.py
+/drfc_manager/main.py
+
+# Poetry Dependency Management
+poetry.lock

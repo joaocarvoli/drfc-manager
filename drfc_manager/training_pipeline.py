@@ -4,14 +4,14 @@ from io import BytesIO
 from gloe import If
 from gloe.utils import debug, forward
 
-from pipelines.transformers.training import create_sagemaker_temp_files, check_if_metadata_is_available, \
+from drfc_manager.transformers.training import create_sagemaker_temp_files, check_if_metadata_is_available, \
     upload_hyperparameters, upload_metadata, upload_reward_function, upload_training_params_file
-from pipelines.utils.docker.server import DockerClientServer
-from pipelines.transformers.general import check_if_model_exists, images_tags_has_some_running_container, \
+from drfc_manager.utils.docker.server import DockerClientServer
+from drfc_manager.transformers.general import check_if_model_exists, images_tags_has_some_running_container, \
     echo, forward_condition
-from pipelines.types_built.hyperparameters import HyperParameters
-from pipelines.types_built.model_metadata import ModelMetadata
-from pipelines.utils.minio.server import MinioClientServer
+from drfc_manager.types_built.hyperparameters import HyperParameters
+from drfc_manager.types_built.model_metadata import ModelMetadata
+from drfc_manager.utils.minio.server import MinioClientServer
 
 
 _docker_client = DockerClientServer.get_instance()

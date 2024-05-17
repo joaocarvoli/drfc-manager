@@ -1,4 +1,4 @@
-from pipelines.types_built.hyperparameters import HyperParameters
+from drfc_manager.types_built.hyperparameters import HyperParameters
 
 import io
 import os
@@ -6,8 +6,8 @@ from minio import Minio as MinioClient
 from minio.error import MinioException
 from orjson import dumps, OPT_INDENT_2
 
-from pipelines.types_built.model_metadata import ModelMetadata
-from pipelines.utils.minio.exceptions.file_upload_exception import FileUploadException
+from drfc_manager.types_built.model_metadata import ModelMetadata
+from drfc_manager.utils.minio.exceptions.file_upload_exception import FileUploadException
 
 _bucket_name = os.getenv('BUCKET_NAME')
 _custom_files_folder = os.getenv('CUSTOM_FILES_FOLDER_PATH')

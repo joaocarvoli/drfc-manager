@@ -4,17 +4,17 @@ from gloe import transformer, partial_transformer
 from minio import Minio as MinioClient
 from minio.error import MinioException
 
-from pipelines.helpers.files_manager import create_folder, delete_files_on_folder
-from pipelines.transformers.exceptions.base import BaseExceptionTransformers
-from pipelines.types_built.hyperparameters import HyperParameters
-from pipelines.types_built.model_metadata import ModelMetadata
-from pipelines.utils.commands.docker_compose import DockerComposeCommands
-from pipelines.utils.minio.utilities import upload_hyperparameters as _upload_hyperparameters
-from pipelines.utils.minio.utilities import upload_reward_function as _upload_reward_function
-from pipelines.utils.minio.utilities import upload_metadata as _upload_metadata
-from pipelines.utils.minio.utilities import upload_local_data as _upload_local_data
-from pipelines.types_built.docker import DockerImages
-from pipelines.helpers.training_params import writing_on_temp_training_yml
+from drfc_manager.helpers.files_manager import create_folder, delete_files_on_folder
+from drfc_manager.transformers.exceptions.base import BaseExceptionTransformers
+from drfc_manager.types_built.hyperparameters import HyperParameters
+from drfc_manager.types_built.model_metadata import ModelMetadata
+from drfc_manager.utils.commands.docker_compose import DockerComposeCommands
+from drfc_manager.utils.minio.utilities import upload_hyperparameters as _upload_hyperparameters
+from drfc_manager.utils.minio.utilities import upload_reward_function as _upload_reward_function
+from drfc_manager.utils.minio.utilities import upload_metadata as _upload_metadata
+from drfc_manager.utils.minio.utilities import upload_local_data as _upload_local_data
+from drfc_manager.types_built.docker import DockerImages
+from drfc_manager.helpers.training_params import writing_on_temp_training_yml
 
 
 sagemaker_temp_dir = '/tmp/sagemaker'
