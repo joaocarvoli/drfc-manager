@@ -4,10 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="feat: Adding initial version of the training notebooks and its requirements">
+    <list default="true" id="ef5a2bf8-24d5-4ecf-8b2d-507e7acd4f87" name="Changes" comment="chore: gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/notebook-training-drfc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/notebook-training-drfc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/transformers/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/transformers/general.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/PythonImportHelper-v2-Completion.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/helpers/files_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/files_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/helpers/training_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/helpers/training_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/training_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/training_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/exceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/exceptions/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/exceptions/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/general.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformers/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/transformers/training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/types_built/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/types_built/docker.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/docker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/types_built/hyperparameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/hyperparameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/types_built/model_metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/types_built/model_metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/commands/docker_compose.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/commands/docker_compose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/docker/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/docker/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/exceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/exceptions/file_upload_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/exceptions/file_upload_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/utils/minio/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/drfc_manager/utils/minio/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +90,7 @@
     "Python.training_workflow.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.jupyter notebook.executor": "Run",
     "git-widget-placeholder": "dev",
     "last_opened_file_path": "/Users/joaocarvoli/Desktop/desktop/uni/notebook-training-drfc",
     "node.js.detected.package.eslint": "true",
@@ -67,7 +98,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,6 +118,9 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
     <configuration name="docker_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="notebook-training-drfc" />
       <option name="ENV_FILES" value="" />
@@ -202,6 +236,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="jupyter notebook" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="jupyter notebook" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Python.docker_server" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.training" />
+      <item itemvalue="Python.training_pipeline" />
+      <item itemvalue="Python.training_workflow" />
+      <item itemvalue="Shell Script.jupyter notebook" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
@@ -215,7 +273,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
@@ -241,7 +299,9 @@
       <workItem from="1715696232538" duration="319000" />
       <workItem from="1715696577167" duration="752000" />
       <workItem from="1715717972775" duration="8688000" />
-      <workItem from="1715731484901" duration="1567000" />
+      <workItem from="1715731484901" duration="1641000" />
+      <workItem from="1715739377177" duration="42000" />
+      <workItem from="1715740506005" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="docs: Initial docs">
       <option name="closed" value="true" />
@@ -435,15 +495,37 @@
       <option name="project" value="LOCAL" />
       <updated>1715696421205</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat: Starting to use docker compose commands through python subprocess">
+      <option name="closed" value="true" />
+      <created>1715738858546</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1715738858546</updated>
+    </task>
+    <task id="LOCAL-00026" summary="chore: .idea and vscode project files">
+      <option name="closed" value="true" />
+      <created>1715738886954</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1715738886954</updated>
+    </task>
+    <task id="LOCAL-00027" summary="chore: gitignore">
+      <option name="closed" value="true" />
+      <created>1715738894699</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1715738894699</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs: Initial docs" />
-    <MESSAGE value="refact: changing module name" />
     <MESSAGE value="refact: changing modules location to utils" />
     <MESSAGE value="feat: starting to create docker utils methods" />
     <MESSAGE value="feat: generic transformer exception model" />
@@ -466,14 +548,28 @@
     <MESSAGE value="chore: setup script to use PiPy" />
     <MESSAGE value="chore: adding pypi build files" />
     <MESSAGE value="feat: Adding initial version of the training notebooks and its requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Adding initial version of the training notebooks and its requirements" />
+    <MESSAGE value="feat: Starting to use docker compose commands through python subprocess" />
+    <MESSAGE value="chore: .idea and vscode project files" />
+    <MESSAGE value="chore: gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: gitignore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drfc_manager/utils/commands/docker_compose.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/notebook_training_drfc$training_pipeline.coverage" NAME="training_pipeline Coverage Results" MODIFIED="1715615167173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$architecture_general.coverage" NAME="architecture-general Coverage Results" MODIFIED="1715694857492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$training.coverage" NAME="training Coverage Results" MODIFIED="1715551619111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines/transformers" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$docker.coverage" NAME="docker_server Coverage Results" MODIFIED="1715376162269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workflow/training" />
-    <SUITE FILE_PATH="coverage/notebook_training_drfc$main.coverage" NAME="main Coverage Results" MODIFIED="1715730400794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines" />
+    <SUITE FILE_PATH="coverage/notebook_training_drfc$main.coverage" NAME="main Coverage Results" MODIFIED="1715740867825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipelines" />
     <SUITE FILE_PATH="coverage/notebook_training_drfc$training_workflow.coverage" NAME="training_workflow Coverage Results" MODIFIED="1715219021403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workflow" />
   </component>
 </project>
