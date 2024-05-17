@@ -12,7 +12,9 @@ from pipelines.utils.commands.docker_compose import DockerComposeCommands
 from pipelines.utils.minio.utilities import upload_hyperparameters as _upload_hyperparameters
 from pipelines.utils.minio.utilities import upload_reward_function as _upload_reward_function
 from pipelines.utils.minio.utilities import upload_metadata as _upload_metadata
+from pipelines.utils.minio.utilities import upload_local_data as _upload_local_data
 from pipelines.types_built.docker import DockerImages
+from pipelines.helpers.training_params import writing_on_temp_training_yml
 
 
 sagemaker_temp_dir = '/tmp/sagemaker'
@@ -66,6 +68,17 @@ def upload_metadata(_, minio_client: MinioClient, model_metadata: ModelMetadata)
 def upload_reward_function(_, minio_client: MinioClient, reward_function_buffer: BytesIO):
     try:
         _upload_reward_function(minio_client, reward_function_buffer)
+    except MinioException as e:
+        raise BaseExceptionTransformers(exception=e)
+    except Exception as e:
+        raise BaseExceptionTransformers("It was not possible to upload the reward function", e)
+    
+
+@partial_transformer
+def upload_training_params_file(_, minio_client: MinioClient):
+    try:
+        yaml_key, local_yaml_path = writing_on_temp_training_yml()
+        _upload_local_data(minio_client, local_yaml_path, yaml_key)
     except MinioException as e:
         raise BaseExceptionTransformers(exception=e)
     except Exception as e:

@@ -5,7 +5,7 @@ from gloe import If
 from gloe.utils import debug, forward
 
 from pipelines.transformers.training import create_sagemaker_temp_files, check_if_metadata_is_available, \
-    upload_hyperparameters, upload_metadata, upload_reward_function
+    upload_hyperparameters, upload_metadata, upload_reward_function, upload_training_params_file
 from pipelines.utils.docker.server import DockerClientServer
 from pipelines.transformers.general import images_tags_has_some_running_container, \
     echo, forward_condition
@@ -34,7 +34,7 @@ def train_pipeline(hyperparameters: HyperParameters, model_metadata: ModelMetada
                     upload_metadata(_minio_client, model_metadata),
                     upload_reward_function(_minio_client, reward_function_buffer)
                 )
-            ) >> echo('upload successfully')
+            ) >> upload_training_params_file(_minio_client) >> echo('upload successfully')
         )
     )
     training_start_pipeline(None)
