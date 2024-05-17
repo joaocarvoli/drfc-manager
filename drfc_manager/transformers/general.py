@@ -8,6 +8,7 @@ from drfc_manager.types_built.docker import DockerImages
 from drfc_manager.utils.commands.docker_compose import DockerComposeCommands
 from drfc_manager.utils.docker.utilities import check_if_image_has_container_running
 from drfc_manager.utils.minio.utilities import check_if_object_exists as _check_if_object_exists
+from drfc_manager.utils.minio.utilities import copy_object as _copy_object, remove_objects_folder as _remove_objects_folder
 
 from minio import Minio as MinioClient
 from minio.error import MinioException
@@ -38,21 +39,43 @@ def images_tags_has_running_container(_, docker_client: DockerClient, image_tags
 @partial_transformer
 def echo(_, message: str):
     print(message)
-    
-    
+
+
 @condition
 def forward_condition(_condition: bool):
     return _condition
 
+
 @partial_transformer
-def check_if_model_exists(_, minio_client: MinioClient, model_name: str):
+def check_if_model_exists(_, minio_client: MinioClient, model_name: str, overwrite: bool = False):
     try:
         file_to_check = '/reward_function.py'
-        return _check_if_object_exists(minio_client, model_name + file_to_check)
+        object_exists = _check_if_object_exists(minio_client, model_name + file_to_check)
+        return object_exists if overwrite is False else not object_exists
     except MinioException as e:
         raise BaseExceptionTransformers(exception=e)
     except Exception as e:
         raise BaseExceptionTransformers("It was not possible to check if the model exists", e)
+
+
+@partial_transformer
+def copy_object(_, minio_client: MinioClient, source_object_name: str, dest_object_name: str) -> bool:
+    try:
+        return _copy_object(minio_client, source_object_name, dest_object_name)
+    except MinioException as e:
+        raise BaseExceptionTransformers(exception=e)
+    except Exception as e:
+        raise BaseExceptionTransformers(f"It was not possible to copy the object {source_object_name} to {dest_object_name}", e)
+
+
+@partial_transformer
+def remove_objects_folder(_, minio_client: MinioClient, object_name: str) -> bool:
+    try:
+        return _remove_objects_folder(minio_client, object_name)
+    except MinioException as e:
+        raise BaseExceptionTransformers(exception=e)
+    except Exception as e:
+        raise BaseExceptionTransformers(f"It was not possible remove the object {object_name}", e)
 
 
 @partial_transformer
