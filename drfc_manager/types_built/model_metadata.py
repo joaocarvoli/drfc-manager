@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from enum import Enum
 
 
@@ -93,8 +93,8 @@ class ModelMetadata:
     - `sensor`: List of sensors used by the model (default: `[FRONT_FACING_CAMERA]`).
     """
     action_space_type: ActionSpaceType = ActionSpaceType.CONTINUOUS
-    action_space: type[ContinuousActionSpace | List[DiscreteActionSpace]] = (
-        ContinuousActionSpace(
+    action_space: Union[ContinuousActionSpace, List[DiscreteActionSpace]] = field(
+        default_factory=lambda: ContinuousActionSpace(
             steering_angle=SteeringAngle(high=30.0, low=-30.0),
             speed=Speed(high=4.0, low=1.0))
     )
