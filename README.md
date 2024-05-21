@@ -62,4 +62,4 @@ first_train()
 ## Idea behind
 
 This lib is being developed directly using the same ideas and implementation of 
-the repo https://github.com/aws-deepracer-community/deepracer-for-cloud according to its description is: _"A quick and easy way to get up and running with a DeepRacer training environment using a cloud virtual machine or a local computer" _
+the repo https://github.com/aws-deepracer-community/deepracer-for-cloud according to its description: _"A quick and easy way to get up and running with a DeepRacer training environment using a cloud virtual machine or a local computer"_.
