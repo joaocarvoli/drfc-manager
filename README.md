@@ -28,10 +28,12 @@ This library allows users to **optimize the training of their Reinforcement Lear
 
 ## Key Advantages
 
-- Easily set model configuration to train (hyperparameters, model metadata, and reward function)
+- Easily set model configuration to training (hyperparameters, model metadata, and reward function)
 - Create many model configurations for various training
 - Stack multiple training configurations to be executed in a logical sequence
-- Set a stop criteria for model training (eg. convergence, loss behavior, iteration count or another)
+
+## Future ideas :bulb:
+- Set a stop criteria for model training (eg. convergence, loss behavior, iteration count, or another)
 
 ## Usage
 
