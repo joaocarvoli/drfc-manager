@@ -34,6 +34,7 @@ This library allows users to **optimize the training of their Reinforcement Lear
 
 ## Future ideas :bulb:
 - Set a stop criteria for model training (eg. convergence, loss behavior, iteration count, or another)
+- Integrate with some hyperparameter tuning techniques from machine learning libs (e.g., Sckit Learning) 
 
 ## Usage
 
